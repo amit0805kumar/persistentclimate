@@ -1,0 +1,76 @@
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0.1px;
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.495),
+        rgba(112, 155, 52, 0.225)
+      ),
+      url("../images/banner.jpg");
+    background-size: cover;
+    z-index: -1;
+  }
+  .main_content {
+    margin-top: 30rem;
+    margin-left: 6rem;
+    color: $color_white;
+    .heading {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      //   font-family: "Castoro", serif;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 50%;
+        transform: translate(-30%, -50%);
+        opacity: 0.2;
+        width: 30%;
+        height: 5rem;
+        background: $color_white;
+      }
+    }
+    .sub_heading {
+      font-family: "Castoro", serif;
+      font-size: 2rem;
+    }
+
+    .mainBtn {
+      margin-top: 2rem;
+      display: flex;
+      background-image: linear-gradient(
+        to right,
+        rgba(89, 145, 52, 0.466),
+        rgba(112, 155, 52, 0.37)
+      );
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      justify-content: space-between;
+      width: 15rem;
+      font-size: 1.5rem;
+      color: $color_white;
+      align-items: center;
+      transition: all 0.3s;
+      text-decoration: none;
+      font-weight: 400;
+      .icon {
+        margin-top: 0.5rem;
+        transition: all 0.3s;
+      }
+      &:hover .icon {
+        transform: rotate(90deg);
+      }
+      &:hover {
+        width: 13rem;
+      }
+    }
+  }
+}

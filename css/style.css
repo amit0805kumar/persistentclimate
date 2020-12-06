@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+               supported by Chrome and Opera */ }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0.1px; }
+  header .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.495), rgba(112, 155, 52, 0.225)), url("../images/banner.jpg");
+    background-size: cover;
+    z-index: -1; }
+  header .main_content {
+    margin-top: 30rem;
+    margin-left: 6rem;
+    color: #fff; }
+    header .main_content .heading {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      position: relative; }
+      header .main_content .heading::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 50%;
+        transform: translate(-30%, -50%);
+        opacity: 0.2;
+        width: 30%;
+        height: 5rem;
+        background: #fff; }
+    header .main_content .sub_heading {
+      font-family: "Castoro", serif;
+      font-size: 2rem; }
+    header .main_content .mainBtn {
+      margin-top: 2rem;
+      display: flex;
+      background-image: linear-gradient(to right, rgba(89, 145, 52, 0.466), rgba(112, 155, 52, 0.37));
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      justify-content: space-between;
+      width: 15rem;
+      font-size: 1.5rem;
+      color: #fff;
+      align-items: center;
+      transition: all 0.3s;
+      text-decoration: none;
+      font-weight: 400; }
+      header .main_content .mainBtn .icon {
+        margin-top: 0.5rem;
+        transition: all 0.3s; }
+      header .main_content .mainBtn:hover .icon {
+        transform: rotate(90deg); }
+      header .main_content .mainBtn:hover {
+        width: 13rem; }
+
+nav {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #599133;
+  z-index: 500;
+  height: 8rem; }
+  nav .nav_wrapper {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    align-items: stretch;
+    justify-content: space-between; }
+    nav .nav_wrapper .navLogo {
+      width: 6rem;
+      display: flex;
+      align-items: center;
+      text-decoration: none; }
+      nav .nav_wrapper .navLogo img {
+        width: 100%; }
+      nav .nav_wrapper .navLogo .text {
+        color: #044791;
+        margin-left: 0.5rem;
+        font-size: 1.5rem; }
+    nav .nav_wrapper .links {
+      display: flex;
+      height: 100%;
+      align-items: stretch; }
+      nav .nav_wrapper .links .linkBox {
+        height: 100%;
+        margin: 0 1rem;
+        position: relative;
+        display: flex;
+        align-items: center; }
+        nav .nav_wrapper .links .linkBox a.main {
+          color: #599133;
+          font-size: 1.5rem;
+          text-decoration: none;
+          font-weight: 700;
+          transition: all 0.3s;
+          height: 100%;
+          display: flex;
+          align-items: center; }
+          nav .nav_wrapper .links .linkBox a.main:hover {
+            color: #044791; }
+        nav .nav_wrapper .links .linkBox .subLinks {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          display: none; }
+          nav .nav_wrapper .links .linkBox .subLinks a.subLink {
+            background: #044791;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1rem;
+            width: 12rem;
+            text-decoration: none;
+            transition: all 0.3s; }
+            nav .nav_wrapper .links .linkBox .subLinks a.subLink span {
+              transition: all 0.3s; }
+            nav .nav_wrapper .links .linkBox .subLinks a.subLink:hover {
+              background: #fff;
+              color: #044791; }
+            nav .nav_wrapper .links .linkBox .subLinks a.subLink:hover span {
+              margin-left: 0.5rem; }
+        nav .nav_wrapper .links .linkBox .searchBar {
+          display: flex;
+          position: relative;
+          background: #c5c5c5;
+          border-radius: 300px;
+          overflow: hidden;
+          padding: 2px; }
+          nav .nav_wrapper .links .linkBox .searchBar input {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0.3rem;
+            padding-left: 1rem;
+            width: 85%; }
+            nav .nav_wrapper .links .linkBox .searchBar input:focus {
+              outline: none; }
+            nav .nav_wrapper .links .linkBox .searchBar input::placeholder {
+              color: #616161; }
+          nav .nav_wrapper .links .linkBox .searchBar .icon {
+            position: absolute;
+            right: 4px;
+            cursor: pointer;
+            font-size: 0.5rem;
+            color: #616161;
+            top: 52%;
+            transform: translateY(-50%); }
+            nav .nav_wrapper .links .linkBox .searchBar .icon span {
+              font-size: 2rem; }
+
+/*# sourceMappingURL=style.css.map */
